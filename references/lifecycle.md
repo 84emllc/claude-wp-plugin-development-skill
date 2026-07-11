@@ -14,7 +14,7 @@ Guardrails:
 
 Upstream reference:
 
-- https://developer.wordpress.org/plugins/plugin-basics/activation-deactivation-hooks/
+- <https://developer.wordpress.org/plugins/plugin-basics/activation-deactivation-hooks/>
 
 ## Uninstall
 
@@ -29,5 +29,4 @@ Guardrails:
 
 Upstream reference:
 
-- https://developer.wordpress.org/plugins/plugin-basics/uninstall-methods/
-
+- <https://developer.wordpress.org/plugins/plugin-basics/uninstall-methods/>

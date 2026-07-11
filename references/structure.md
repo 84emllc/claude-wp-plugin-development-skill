@@ -23,4 +23,4 @@ Use this file when introducing or refactoring a plugin architecture.
 
 Upstream reference:
 
-- https://developer.wordpress.org/plugins/plugin-basics/
+- <https://developer.wordpress.org/plugins/plugin-basics/>

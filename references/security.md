@@ -9,7 +9,7 @@ Use this file when making security fixes or when handling any input/output.
 
 Upstream reference:
 
-- https://developer.wordpress.org/apis/security/nonces/
+- <https://developer.wordpress.org/apis/security/nonces/>
 
 ## Sanitization and escaping
 
@@ -25,7 +25,7 @@ Practical rules:
 
 Common review guidance:
 
-- https://developer.wordpress.org/plugins/wordpress-org/detailed-plugin-guidelines/
+- <https://developer.wordpress.org/plugins/wordpress-org/detailed-plugin-guidelines/>
 
 ## The canonical quartet: nonce + capability + sanitize + escape
 
@@ -79,4 +79,3 @@ The matching form, with the nonce field and output escaping (4. escape on output
 ```
 
 Context matters for escaping: `esc_html()` for element content, `esc_attr()` inside attributes, `esc_url()` for URLs, `esc_js()` for inline JS strings, `wp_kses_post()` when limited HTML is allowed.
-

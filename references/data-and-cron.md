@@ -16,4 +16,3 @@ Use this file when adding persistent storage, background jobs, or upgrade routin
 
 If using `$wpdb->prepare()`, avoid building queries with concatenated user input.
 Recent WordPress versions support identifier placeholders (`%i`) but you must not assume it exists without checking capabilities or target versions.
-

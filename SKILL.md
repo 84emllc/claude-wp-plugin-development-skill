@@ -46,6 +46,7 @@ Guidelines:
 - Use PSR-4 autoloading via Composer with the `EightyFourEM\` namespace; name class files `ClassName.php`, not the WordPress `class-{classname}.php` convention.
 
 See:
+
 - `references/structure.md`
 
 ### 2) Hooks and lifecycle (activation/deactivation/uninstall)
@@ -57,6 +58,7 @@ Activation hooks are fragile; follow guardrails:
 - uninstall should be explicit and safe (`uninstall.php` or `register_uninstall_hook`)
 
 See:
+
 - `references/lifecycle.md`
 
 ### 3) Settings and admin UI (Settings API)
@@ -67,6 +69,7 @@ Prefer Settings API for options:
 - sanitize via `sanitize_callback`
 
 See:
+
 - `references/settings-api.md`
 
 ### 4) Security baseline (always)
@@ -79,6 +82,7 @@ Before shipping:
 - Use `$wpdb->prepare()` for SQL; avoid building SQL with string concatenation.
 
 See:
+
 - `references/security.md`
 
 ### 5) Data storage, cron, migrations (if needed)
@@ -88,6 +92,7 @@ See:
 - For schema changes, write upgrade routines and store schema version.
 
 See:
+
 - `references/data-and-cron.md`
 
 ### 6) Reviewing existing code
@@ -126,6 +131,7 @@ corresponding tests.
   - nonce present but missing capability checks; or sanitized input not escaped on output
 
 See:
+
 - `references/debugging.md`
 
 ## Escalation

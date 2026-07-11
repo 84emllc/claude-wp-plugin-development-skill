@@ -10,9 +10,9 @@ Core APIs:
 
 Upstream references:
 
-- Settings API overview: https://developer.wordpress.org/plugins/settings/settings-api/
-- Register settings: https://developer.wordpress.org/plugins/settings/registration/
-- Add settings fields: https://developer.wordpress.org/plugins/settings/settings-fields/
+- Settings API overview: <https://developer.wordpress.org/plugins/settings/settings-api/>
+- Register settings: <https://developer.wordpress.org/plugins/settings/registration/>
+- Add settings fields: <https://developer.wordpress.org/plugins/settings/settings-fields/>
 
 Practical guardrails:
 
@@ -91,4 +91,3 @@ class Settings {
 ```
 
 Wiring notes: the group passed to `settings_fields()` must match the first argument of `register_setting()`; the page slug passed to `do_settings_sections()` must match the page argument of `add_settings_section()`/`add_settings_field()`. `options.php` handles the nonce and save; your `sanitize_callback` is the validation gate.
-

@@ -16,4 +16,3 @@
 - Confirm `register_setting()` is called.
 - Confirm the option group matches the form.
 - Confirm capability checks and nonces.
-
