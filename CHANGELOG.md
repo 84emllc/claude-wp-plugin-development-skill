@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- `references/security.md`: an "Authorization: capabilities only, never request data" section (no access decisions from the Referer, `wp_get_raw_referer()`, headers, query arguments, `is_admin()` or `wp_doing_ajax()`), plus "AJAX handlers" and "REST routes" sections.
+- `references/security.md`: an output escaping contexts table, including `esc_textarea()` and `wp_json_encode()` with the script APIs, and guidance to run third-party HTML through `wp_kses_post()` before saving.
+- `SKILL.md` security baseline: the authorization rule and the attacker-controlled entry points, matching `references/security.md`.
+
+### Changed
+
+- Compatibility target raised to WordPress 7.0+ and PHP 7.4.0+, matching the upstream WordPress agent skill.
+
+### Fixed
+
+- `scripts/detect_plugins.mjs` now reads plugin header fields written inside a docblock (` * Version: 1.0.0`). Output shape is unchanged.
+
 ## [0.1.0] - 2026-07-11
 
 ### Added

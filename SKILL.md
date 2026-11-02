@@ -1,7 +1,7 @@
 ---
 name: wp-plugin-development
 description: "Use when developing, reviewing, or refactoring WordPress plugins: architecture and hooks, activation/deactivation/uninstall, admin UI and Settings API, data storage and custom tables, cron/tasks, REST/AJAX endpoints, security (nonces/capabilities/sanitization/escaping), performance, testability, i18n, release packaging, reviewing plugin code against WordPress coding standards, and the EightyFourEM\\ conventions used across 84EM projects."
-compatibility: "Targets WordPress 6.9+ (PHP 7.2.24+). Filesystem-based agent with bash + node. Some workflows require WP-CLI."
+compatibility: "Targets WordPress 7.0+ (PHP 7.4.0+). Filesystem-based agent with bash + node. Some workflows require WP-CLI."
 ---
 
 # WP Plugin Development
@@ -78,6 +78,8 @@ Before shipping:
 
 - Validate/sanitize input early; escape output late.
 - Use nonces to prevent CSRF *and* capability checks for authorization.
+- Decide access only with `current_user_can()`. Never with the Referer, `wp_get_raw_referer()`, other headers, query arguments, `is_admin()` or `wp_doing_ajax()`; the client controls or can trigger all of them.
+- Treat `wp_ajax_nopriv_*`, `?wc-ajax=` and REST routes as attacker-controlled; every REST route needs a capability-based `permission_callback`.
 - Avoid directly trusting `$_POST` / `$_GET`; use `wp_unslash()` and specific keys.
 - Use `$wpdb->prepare()` for SQL; avoid building SQL with string concatenation.
 
